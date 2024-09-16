@@ -1,13 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Change Calculator</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
-    <!-- Write your markup here -->
 
-    <!-- Don't forget to add your <script> tag here -->
-
+  <body class="bg-[#15202b] text-white">
+    <main class="p-8 flex flex-col gap-8">
+      <h1 class="text-4xl">Change Calculator</h1>
+      <section class="flex gap-8">
+        <div class="flex flex-col">
+          <label>Amount Due</label>
+          <input id="amount-due" type="number" />
+        </div>
+        <div class="flex flex-col">
+          <label>Amount Received</label>
+          <input id="amount-received" type="number" />
+        </div>
+      </section>
+    </main>
+    <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
