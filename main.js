@@ -1,9 +1,5 @@
 const DENOMINATIONS = {
-  twentyDollars: 2000, // in pennies
-  tenDollars: 1000,
-  fiveDollars: 500,
-  twoDollars: 200,
-  dollars: 100,
+  dollars: 100, // in pennies
   quarters: 25,
   dimes: 10,
   nickels: 5,
@@ -19,10 +15,6 @@ calculateChangeButton.addEventListener("click", handleCalculation);
 
 function calculateChange(amountDue, amountReceived) {
   const change = {
-    twentyDollars: 0,
-    tenDollars: 0,
-    fiveDollars: 0,
-    twoDollars: 0,
     dollars: 0,
     quarters: 0,
     dimes: 0,
