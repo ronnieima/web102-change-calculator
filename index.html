@@ -5,19 +5,108 @@
     <title>Change Calculator</title>
     <link href="./styles.css" rel="stylesheet" />
     <link href="./output.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body class="bg-[#15202b] text-white">
-    <main class="p-8 flex flex-col gap-8">
-      <h1 class="text-4xl">Change Calculator</h1>
-      <section class="flex gap-8">
-        <div class="flex flex-col">
+  <body
+    class="bg-[#15202b] text-white w-full min-h-screen flex items-center justify-center"
+  >
+    <main
+      class="p-12 flex flex-col gap-8 justify-center h-full max-w-5xl bg-blue-950 rounded-xl shadow-xl"
+    >
+      <h1 class="text-5xl font-bold">Change Calculator</h1>
+      <section class="flex gap-16 justify-between">
+        <div class="flex flex-col w-full">
           <label>Amount Due</label>
-          <input id="amount-due" type="number" />
+          <input
+            id="amount-due"
+            type="number"
+            class="text-black px-4 py-2 rounded-lg text-lg h-full"
+            min="0"
+          />
         </div>
-        <div class="flex flex-col">
+
+        <div class="flex flex-col w-full">
           <label>Amount Received</label>
-          <input id="amount-received" type="number" />
+          <input
+            id="amount-received"
+            type="number"
+            class="text-black px-4 py-2 rounded-lg text-lg h-full"
+            min="0"
+          />
+        </div>
+      </section>
+
+      <section class="flex gap-8 items-center justify-between">
+        <h2 class="text-2xl">Change: $<span id="change">0</span></h2>
+        <button
+          id="calculate-change"
+          class="bg-sky-900 p-4 rounded-md font-bold text-slate-100 hover:bg-sky-800 transition-all active:translate-y-[1px] active:bg-sky-700"
+        >
+          Calculate Change
+        </button>
+      </section>
+
+      <div class="h-[2px] bg-black/60 w-full rounded-lg"></div>
+
+      <section
+        class="flex gap-16 text-2xl text-center flex-wrap justify-between"
+      >
+        <div class="flex flex-col justify-start gap-2 items-center">
+          <h2>$20</h2>
+          <span class="text-5xl font-bold" id="twentyDollars-output">0</span>
+          <img src="images/twenty.jpg" class="h-20 w-32" />
+        </div>
+        <div class="flex flex-col justify-start gap-2 items-center">
+          <h2>$10</h2>
+          <span class="text-5xl font-bold" id="tenDollars-output">0</span>
+          <img src="images/ten.jpeg" class="h-20 w-32" />
+        </div>
+        <div class="flex flex-col justify-start gap-2 items-center">
+          <h2>$5</h2>
+          <span class="text-5xl font-bold" id="fiveDollars-output">0</span>
+          <img src="images/five.jpg" class="h-20 w-32" />
+        </div>
+        <div class="flex flex-col justify-start gap-2 items-center">
+          <h2>$2</h2>
+          <span class="text-5xl font-bold" id="twoDollars-output">0</span>
+          <img src="images/two.jpg" class="h-20 w-32" />
+        </div>
+
+        <div class="flex flex-col justify-start gap-2 items-center">
+          <h2>$1</h2>
+          <span class="text-5xl font-bold" id="dollars-output">0</span>
+          <img src="images/dollar.png" class="h-20 w-32" />
+        </div>
+
+        <div class="flex flex-col justify-start gap-2 items-center">
+          <h2>Quarters</h2>
+          <span class="text-5xl font-bold" id="quarters-output">0</span>
+          <img src="images/quarter.png" class="size-20" />
+        </div>
+
+        <div class="flex flex-col justify-start gap-2 items-center">
+          <h2>Dimes</h2>
+          <span class="text-5xl font-bold" id="dimes-output">0</span>
+          <img src="images/dime.png" class="size-20" />
+        </div>
+
+        <div class="flex flex-col justify-start gap-2 items-center">
+          <h2>Nickles</h2>
+          <span class="text-5xl font-bold" id="nickels-output">0</span>
+          <img src="images/nickel.png" class="size-20" />
+        </div>
+
+        <div class="flex flex-col justify-start gap-2 items-center">
+          <h2>Pennies</h2>
+          <span class="text-5xl font-bold" id="pennies-output">0</span>
+          <img src="images/penny.png" class="size-20" />
         </div>
       </section>
     </main>
